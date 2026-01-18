@@ -133,9 +133,9 @@
 
   // Configure headings.
   set heading(numbering: heading-numbering)
-  show heading: it => locate(loc => {
+  show heading: it => context {
     // Find out the final number of the heading counter.
-    let levels = counter(heading).at(loc)
+    let levels = counter(heading).get()
     set text(10pt, weight: 400)
     if it.level == 1 [
       // First-level headings are centered smallcaps.
@@ -172,7 +172,7 @@
       }
       _#(it.body):_
     ]
-  })
+  }
 
 
   if (logo != none) {
