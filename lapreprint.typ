@@ -202,7 +202,7 @@
   }
   // Authors and affiliations
   if authors.len() > 0 {
-    box(inset: (y: 10pt), {
+    box(width: 100%, inset: (y: 10pt), {
       authors.map(author => {
         text(11pt, weight: "semibold", author.name)
         h(1pt)
